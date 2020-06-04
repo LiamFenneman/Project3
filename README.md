@@ -42,14 +42,14 @@ git, writing test cases and documenting performance against milestones)*
 
 ### Installation Instructions (Windows 10)
 
-**Requirements:**
-
-- MinGW - [How to Install MinGW](http://www.codebind.com/cprogramming/install-mingw-windows-10-gcc/)
 - Geany - [Download Geany](https://www.geany.org/download/releases/)
 
-1. Clone respoitory
-2. Create [makefiles (click for instructions)](https://github.com/LiamFenneman/Project3/blob/master/MAKEFILES.md) in AVC_robot and AVC_server.
-3. Open `server3.cpp` and `robot.cpp` in Geany.
-4. Click the "*Build*" tab at the top OR the dropdown next to the "*Build*" button and select "*Set Build Commands*".
-5. Ensure the "*Independant Commands*" -> "*Make*" is set to `ming32-make`.
-6. Run the program by clicking the "*Execute*" button on `server3.cpp` and then `robot.cpp`.
+
+1. Go to the [SMFL website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit".
+1. Extract the files and put them into your C drive. Rename the "SMFL-2.5.1" folder to "SMFL". Should look like:
+![image of folder structure](https://raw.githubusercontent.com/LiamFenneman/Project3/master/images/1.png)
+1. Clone respoitory somewhere on computer.
+1. Open `server3.cpp` and `robot.cpp` in Geany.
+1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
+1. Ensure the "Independant Commands" -> "Make" is set to `mingw32-make`.
+1. Run the program by clicking the "Execute" button on `server3.cpp` and then `robot.cpp`.
