@@ -45,7 +45,7 @@ git, writing test cases and documenting performance against milestones)*
 - Geany - [Download Geany](https://www.geany.org/download/releases/)
 
 
-1. Go to the [SMFL website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit".
+1. Go to the [SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit".
 1. Extract the files and put them into your C drive. Rename the "SFML-2.5.1" folder to "SFML". Should look like:
 ![image of folder structure](https://raw.githubusercontent.com/LiamFenneman/Project3/master/images/1.png)
 1. Clone respoitory somewhere on computer.
