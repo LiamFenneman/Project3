@@ -1,0 +1,5 @@
+*/makefile
+*.exe
+*.o
+server3
+robot

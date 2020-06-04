@@ -38,40 +38,59 @@ git, writing test cases and documenting performance against milestones)*
 | 19 Jun | Hand in Finished Project  | Challenge finished. Everything is documented/tested. Wiki discussion is also due. |
 | 24 Jun | Report Due                | Submit report.                                                                    |
 
+---
+
+### Installation Instructions (Windows 10)
+
+**Requirements:**
+
+- MinGW - [How to Install MinGW](http://www.codebind.com/cprogramming/install-mingw-windows-10-gcc/)
+- Geany - [Download Geany](https://www.geany.org/download/releases/)
+
+1. Clone respoitory
+2. Create [makefiles (click for instructions)](https://github.com/LiamFenneman/Project3/MAKEFILES.md) in AVC_robot and AVC_server.
+3. Open `server3.cpp` and `robot.cpp` in Geany.
+4. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
+5. Ensure the "Independant Commands" -> "Make" is set to `ming32-make`.
+6. Run the program by clicking the "Execute" button on `server3.cpp` and then `robot.cpp`.
+
+---
+
+### To do list: By the 6th Of june
+
+**Addison**
+
+1. Ensure everything needed is uploaded to github
+2. Have SFML working 
+3. Understand and suggest improvements to Liam’s core code
+4. Ask lecturers questions regarding the project
+5. Help Liam with looking into completion
 
 
-To do list: 
-By the 6th Of june
+**Liam**
 
-Addison
-Ensure everything needed is uploaded to github
-Have SFML working 
-Understand and suggest improvements to Liam’s core code
-Ask lecturers questions regarding the project
-Help Liam with looking into completion
+1. Have SFML working
+2. Core code in progress or finished
+3. Commenting on code for everyone to understand
+4. Uploaded code to github with comments on changes
+5. Look into completion
 
 
-Liam
-Have SFML working
-Core code in progress or finished
-Commenting on code for everyone to understand
-Uploaded code to github with comments on changes
-Look into completion
+**Shaylen**
+
+1. Have SFML working
+2. Look at and understand Liam’s core code
+3. Look for potential improvements for core
+4. Document testing for core
+5. Once everything is documented and uploaded, move onto working on completion with Liam
 
 
-Shaylen
-Have SFML working
-Look at and understand Liam’s core code
-Look for potential improvements for core
-Document testing for core
-Once everything is documented and uploaded, move onto working on completion with Liam
+**Nikhil**
 
-
-Nikhil
-Have SFML working
-Look at and understand Liam’s core code
-Look for potential improvements for core
-Document testing for core
-Once everything is documented and uploaded, move onto working on completion with Liam
+1. Have SFML working
+2. Look at and understand Liam’s core code
+3. Look for potential improvements for core
+4. Document testing for core
+5. Once everything is documented and uploaded, move onto working on completion with Liam
 
 
