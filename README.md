@@ -2,7 +2,7 @@
 
 **GitHub**: https://github.com/LiamFenneman/Project3
 
----
+Team name: *Yet to be announced*
 
 ### Team Members
 - Shaylen Mamidi (mamidishay@myvuw.ac.nz)
@@ -37,3 +37,41 @@ git, writing test cases and documenting performance against milestones)*
 | 16 Jun | Discussion for Challenge  | Discuss problems with Challenge.                                                  |
 | 19 Jun | Hand in Finished Project  | Challenge finished. Everything is documented/tested. Wiki discussion is also due. |
 | 24 Jun | Report Due                | Submit report.                                                                    |
+
+
+
+To do list: 
+By the 6th Of june
+
+Addison
+Ensure everything needed is uploaded to github
+Have SFML working 
+Understand and suggest improvements to Liam’s core code
+Ask lecturers questions regarding the project
+Help Liam with looking into completion
+
+
+Liam
+Have SFML working
+Core code in progress or finished
+Commenting on code for everyone to understand
+Uploaded code to github with comments on changes
+Look into completion
+
+
+Shaylen
+Have SFML working
+Look at and understand Liam’s core code
+Look for potential improvements for core
+Document testing for core
+Once everything is documented and uploaded, move onto working on completion with Liam
+
+
+Nikhil
+Have SFML working
+Look at and understand Liam’s core code
+Look for potential improvements for core
+Document testing for core
+Once everything is documented and uploaded, move onto working on completion with Liam
+
+
