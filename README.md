@@ -49,8 +49,8 @@ git, writing test cases and documenting performance against milestones)*
 1. Extract the files and put them into your C drive. Rename the "SFML-2.5.1" folder to "SFML". Should look like:
 ![image of folder structure](https://raw.githubusercontent.com/LiamFenneman/Project3/master/images/1.png)
 1. Search for "Environment Variables" in the Windows start menu and open the control panel "Edit the system environement variables".
-1. Click the button at the bottom called "Environment Variables and double click on "Path".
-1. Add a new entry with "C:\\mingw32\bin".
+1. Click the button at the bottom called "Environment Variables" and double click on "Path".
+1. Add a new entry with `C:\\mingw32\bin`.
 1. Clone respoitory somewhere on computer.
 1. Open `server3.cpp` and `robot.cpp` in Geany.
 1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
