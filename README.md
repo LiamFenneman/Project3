@@ -51,6 +51,7 @@ git, writing test cases and documenting performance against milestones)*
 1. Search for "Environment Variables" in the Windows start menu and open the control panel "Edit the system environement variables".
 1. Click the button at the bottom called "Environment Variables" and double click on "Path".
 1. Add a new entry with `C:\\mingw32\bin`.
+![image of environment variables](https://raw.githubusercontent.com/LiamFenneman/Project3/master/images/2.png)
 1. Clone respoitory somewhere on computer.
 1. Open `server3.cpp` and `robot.cpp` in Geany.
 1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
