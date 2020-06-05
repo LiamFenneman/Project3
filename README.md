@@ -27,7 +27,7 @@ git, writing test cases and documenting performance against milestones)*
 ---
 
 
-|  Date  |         Objectives        |                                        Task                                       |
+|  Date  |         Objectives       |                                        Task                                       |
 |:------:|:-------------------------:|:---------------------------------------------------------------------------------:|
 |  2 Jun | Planning                  | Get plan done, Sort roles, Ensure all members have code working.                  |
 |  6 Jun | Core                      | Finish core with documentation/testing. Discuss steps to take for completion.     |
