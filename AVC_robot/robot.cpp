@@ -11,15 +11,17 @@ int isWhite(int row, int col) {
 	return isWhite;
 }
 
-// gets the number of pixels that are white down the middle of the camera view
-int countWhitePixelsInRow() {
-	int count = 0;
-	for (int row = 0; row < cameraView.height; row++) {
-		if (isWhite(row, (float)cameraView.width/2.0)) {
-			count += 1;
+int findFirstWhiteRow() {
+	int row = 0;
+	int firstWhiteRow = 0;
+	while(firstWhiteRow == 0) {
+		if (row >= cameraView.height) { break; }
+		if (isWhite(row, cameraView.width/2)) {
+			firstWhiteRow = row;
 		}
+		row++;
 	}
-	return count;
+	return firstWhiteRow;
 }
 
 int main(){
@@ -31,28 +33,38 @@ int main(){
 	std::string filename = "i0.ppm";
 	//takePicture();
 	//SavePPMFile(filename,cameraView);
-	int whitePixelCount = countWhitePixelsInRow();
-	int whitePixels [whitePixelCount];
+	int midRow;
+	int firstWhiteRow = 0;
+	
 	while(1) {
 		takePicture();
 		
-		// find the row for each white pixel and add them to the whitePixels array
-		for (int row = 0; row < cameraView.height; row++) {
-			if (isWhite(row, (float)cameraView.width/2.0)) {
-				whitePixels[row] = row;
-			}
+		// find the row in the middle of the white pixels
+		firstWhiteRow = findFirstWhiteRow();
+		midRow = cameraView.height/2;
+		int diff = firstWhiteRow - midRow;
+		
+		// move to the right
+		if (diff > 0) {
+			vLeft = 2.0 * std::abs(diff);
+			vRight = 1.0 * std::abs(diff);
+		}
+		// move to the left
+		else if (diff < 0) {
+			vLeft = 1.0 * std::abs(diff);
+			vRight = 2.0 * std::abs(diff);
+		}
+		// move straight
+		else {
+			vLeft = 5.0;
+			vRight = 5.0;
 		}
 		
-		// find the row in the middle of the white pixels
-		int midIndex = whitePixelCount/2;
-		int midRow = whitePixels[midIndex];
 		
 		// go towards the mid row
-		
-		std::cout<<middleRow<<std::endl;
 
 		setMotors(vLeft,vRight);   
-		//std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
+		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
 		usleep(10000);
 	} //while
 
