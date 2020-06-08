@@ -54,7 +54,7 @@ git, writing test cases and documenting performance against milestones)*
 ![image of environment variables](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/2.png)
 1. Clone respoitory somewhere on computer.
 1. Copy the two makefiles: [AVC_robot](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/robot_makefile) [AVC_server](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/server_makefile).
-1. Put the robot_makefile inside AVC_robot folder and rename to "makefile". Put the server_makefile inside AVC_server folder and rename to "makefile".
+1. Put the `robot_makefile` inside `AVC_robot` folder and rename to *"makefile"*. Put the `server_makefile` inside `AVC_server` folder and rename to *"makefile"*.
 1. Open `server3.cpp` and `robot.cpp` in Geany.
 1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
 1. Ensure the "Independant Commands" -> "Make" is set to `mingw32-make`.
