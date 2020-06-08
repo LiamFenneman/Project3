@@ -8,7 +8,7 @@ void drawRobot(){
     globalWindow.draw(robot.outline);
 
    	// draw robot image
-    sf::Texture texture;   
+    sf::Texture texture;
     texture.loadFromImage(robot.bkImage);
     sf::Sprite sprite;
     sprite.setTexture(texture);

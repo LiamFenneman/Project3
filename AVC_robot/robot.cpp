@@ -24,7 +24,7 @@ int findFirstWhiteRow() {
 	return firstWhiteRow;
 }
 
-int main(){
+int main() {
 	if (initClientRobot() !=0){
 		std::cout<<" Error initializing robot"<<std::endl;
 	}

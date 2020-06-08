@@ -47,12 +47,14 @@ git, writing test cases and documenting performance against milestones)*
 
 1. Go to the [SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit".
 1. Extract the files and put them into your C drive. Rename the "SFML-2.5.1" folder to "SFML". Should look like:
-![image of folder structure](https://raw.githubusercontent.com/LiamFenneman/Project3/master/images/1.png)
+![image of folder structure](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/1.png)
 1. Search for "Environment Variables" in the Windows start menu and open the control panel "Edit the system environement variables".
 1. Click the button at the bottom called "Environment Variables" and double click on "Path".
 1. Add a new entry with `C:\\mingw32\bin`.
-![image of environment variables](https://raw.githubusercontent.com/LiamFenneman/Project3/master/images/2.png)
+![image of environment variables](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/2.png)
 1. Clone respoitory somewhere on computer.
+1. Copy the two makefiles: [AVC_robot](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/robot_makefile) [AVC_server](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/server_makefile).
+1. Put the robot_makefile inside AVC_robot folder and rename to "makefile". Put the server_makefile inside AVC_server folder and rename to "makefile".
 1. Open `server3.cpp` and `robot.cpp` in Geany.
 1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
 1. Ensure the "Independant Commands" -> "Make" is set to `mingw32-make`.
