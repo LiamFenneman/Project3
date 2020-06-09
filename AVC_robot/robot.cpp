@@ -12,11 +12,12 @@ int isWhite(int row, int col) {
 }
 
 int findFirstWhiteRow() {
+	int col = cameraView.width/2;
 	int row = 0;
 	int firstWhiteRow = 0;
 	while(firstWhiteRow == 0) {
 		if (row >= cameraView.height) { break; }
-		if (isWhite(row, cameraView.width/2)) {
+		if (isWhite(row, col)) {
 			firstWhiteRow = row;
 		}
 		row++;
@@ -36,6 +37,8 @@ int main() {
 	int midRow;
 	int firstWhiteRow = 0;
 	
+	double speed = 3.0;
+	
 	while(1) {
 		takePicture();
 		
@@ -44,20 +47,22 @@ int main() {
 		midRow = cameraView.height/2;
 		int diff = firstWhiteRow - midRow;
 		
+		std::cout<<" diff="<<diff<<std::endl;
+		
 		// move to the right
 		if (diff > 0) {
-			vLeft = 2.0 * std::abs(diff);
-			vRight = 1.0 * std::abs(diff);
+			vLeft = 2 * speed;
+			vRight = speed;
 		}
 		// move to the left
 		else if (diff < 0) {
-			vLeft = 1.0 * std::abs(diff);
-			vRight = 2.0 * std::abs(diff);
+			vLeft = speed;
+			vRight = 2 * speed;
 		}
 		// move straight
 		else {
-			vLeft = 5.0;
-			vRight = 5.0;
+			vLeft = speed;
+			vRight = speed;
 		}
 		
 		
