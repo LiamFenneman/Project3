@@ -42,22 +42,38 @@ git, writing test cases and documenting performance against milestones)*
 
 ### Installation Instructions (Windows 10)
 
-- Geany - [Download Geany](https://www.geany.org/download/releases/)
+**Required Programs:**
+- [Geany](https://www.geany.org/download/releases/)
+- [7Zip](https://www.7-zip.org/)
+    - Other uncompression software will work if they can handle `.7z` files and you know how to use that software to uncompress `.7z` files.
 
+**Optional Programs:**
+- [GitHub Desktop](https://desktop.github.com/)
+    - **OR** [Git](https://git-scm.com/) *(if familiar with **git** commands)*
 
-1. Go to the [SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit".
-1. Extract the files and put them into your C drive. Rename the "SFML-2.5.1" folder to "SFML". Should look like:
+**Installation:**
+1. Install MinGW (32-bit) and SFML 2.5.1:
+    - **Option 1:** via Direct Downloads: [MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/7.3.0/threads-posix/dwarf/i686-7.3.0-release-posix-dwarf-rt_v5-rev0.7z/download) & [SFML](https://www.sfml-dev.org/files/SFML-2.5.1-windows-gcc-7.3.0-mingw-32-bit.zip).
+    - **Option 2:** *(only if **Option 1** doesn't work)* Go to the [SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit". 
+1. Select the two downloaded files. Right-Click one of the files and go to "7Zip" -> "Extract Here".
+![image of extracting the files](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/5.png)
+1. Select the two folders that were created *("mingw32" & "SFML-2.5.1")* and right-click one of the folders and select "Cut". Then go to the root of your C drive (type `C:\` into the address bar of File Explorer) and right-click the empty space at the bottom and click "Paste". The two folder should now appear within the root C drive *(like image below)*.
 ![image of folder structure](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/1.png)
 1. Search for "Environment Variables" in the Windows start menu and open the control panel "Edit the system environement variables".
 1. Click the button at the bottom called "Environment Variables" and double click on "Path".
 1. Add a new entry with `C:\\mingw32\bin`.
 ![image of environment variables](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/2.png)
-1. Clone respoitory somewhere on computer.
-1. In the files that was added to your computer, delete the files, `robot.o`, `robot.exe`, `server3.o`, and `server3.exe`
-1. Copy the two makefiles: [AVC_robot](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/robot_makefile) [AVC_server](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/server_makefile).
-1. Put the `robot_makefile` inside `AVC_robot` folder and rename to *"makefile"*. Put the `server_makefile` inside `AVC_server` folder and rename to *"makefile"*.
-1. Make sure to properly link the directory of the "include" and the "lib" folder in the "SFML" folder
+1. Clone respoitory somewhere on computer. *(e.g. Desktop, Documents or GitHub folders)* using GitHub Desktop *(or via git)*
+1. In the files that was added to your computer, delete the files, `robot.o`, `robot.exe`, `server3.o`, and `server3.exe`.
+1. Download the two makefiles: [AVC_robot](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/robot_makefile) & [AVC_server](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/server_makefile).
+    - Ensure they are **NOT** saved with "Text Document" but instead with "All Files" and do **NOT** have any extension.
+1. Put `robot_makefile` inside the `AVC_robot` folder and put `server_makefile` inside the `AVC_server` folder and rename both to *"makefile"*.
+1. Ensure the first line of each makefile contains the path to the SFML folder.
+    - If following the instructions this should be: `DIR = C:\\SFML`.
 1. Open `server3.cpp` and `robot.cpp` in Geany.
 1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
 1. Ensure the "Independant Commands" -> "Make" is set to `mingw32-make`.
+![image of independant commands](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/3.png)
+1. To compile the program click the dropdown next to the "Build" button and click "Make All".
+![image of make all button](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/4.png)
 1. Run the program by clicking the "Execute" button on `server3.cpp` and then `robot.cpp`.
