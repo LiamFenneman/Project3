@@ -32,7 +32,7 @@ git, writing test cases and documenting performance against milestones)*
 |  2 Jun | Planning                  | Get plan done, Sort roles, Ensure all members have code working.                  |
 |  6 Jun | Core                      | Finish core with documentation/testing. Discuss steps to take for completion.     |
 |  9 Jun | Discussion for Completion | Address difficulties / challenges encountered so far.                             |
-| 10 Jun | Wiki Discussion Update    | Wiki Discussion is due on this day.                                               |
+| 12 Jun | Wiki Discussion Update    | Wiki Discussion is due on this day.                                               |
 | 13 Jun | Completion                | Completion finished with docs/testing. Discuss approach for challenge.            |
 | 16 Jun | Discussion for Challenge  | Discuss problems with Challenge.                                                  |
 | 19 Jun | Hand in Finished Project  | Challenge finished. Everything is documented/tested. Wiki discussion is also due. |
