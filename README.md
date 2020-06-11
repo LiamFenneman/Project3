@@ -2,7 +2,7 @@
 
 **GitHub**: https://github.com/LiamFenneman/Project3
 
-Team name: *Yet to be announced*
+Team name: The Floor is Java
 
 ### Team Members
 - Shaylen Mamidi (mamidishay@myvuw.ac.nz)
