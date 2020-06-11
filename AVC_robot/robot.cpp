@@ -32,7 +32,7 @@ int main() {
 	//takePicture();
 	//SavePPMFile(filename,cameraView);
 	
-	double speed = 3.0;
+	double speed = 6.0;
 	
 	while(1) {
 		takePicture();
