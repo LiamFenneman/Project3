@@ -11,18 +11,15 @@ int isWhite(int row, int col) {
 	return isWhite;
 }
 
-int findFirstWhiteRow() {
-	int col = cameraView.width/2;
-	int row = 0;
-	int firstWhiteRow = 0;
-	while(firstWhiteRow == 0) {
-		if (row >= cameraView.height) { break; }
-		if (isWhite(row, col)) {
-			firstWhiteRow = row;
+int findFirstWhiteCol() {
+	int col = 0;
+	while(1) {
+		if (col >= cameraView.width) { break; }
+		if (isWhite(cameraView.height/2, col)) {
+			return col;
 		}
-		row++;
+		col++;
 	}
-	return firstWhiteRow;
 }
 
 int main() {
@@ -34,18 +31,15 @@ int main() {
 	std::string filename = "i0.ppm";
 	//takePicture();
 	//SavePPMFile(filename,cameraView);
-	int midRow;
-	int firstWhiteRow = 0;
 	
 	double speed = 3.0;
 	
 	while(1) {
 		takePicture();
+		int midCol = cameraView.width/2;
 		
-		// find the row in the middle of the white pixels
-		firstWhiteRow = findFirstWhiteRow();
-		midRow = cameraView.height/2;
-		int diff = firstWhiteRow - midRow;
+		int firstCol = findFirstWhiteCol();
+		int diff = firstCol - midCol;
 		
 		std::cout<<" diff="<<diff<<std::endl;
 		
@@ -59,14 +53,6 @@ int main() {
 			vLeft = speed;
 			vRight = 2 * speed;
 		}
-		// move straight
-		else {
-			vLeft = speed;
-			vRight = speed;
-		}
-		
-		
-		// go towards the mid row
 
 		setMotors(vLeft,vRight);   
 		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
