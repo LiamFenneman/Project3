@@ -1,0 +1,23 @@
+Nikhil Patel - ENGR101 - Testing log
+
+
+Logs:
+
+Core testing:
+
+12th June - 12:30:   
+Tested the code for the core, it seems as though the robot gets close to the finish line and then goes off track.
+Other than that no further suggestions for the core, it seems to follow the line quite well.
+
+13th June - 10:53:
+
+ Suggestion:
+In order for the robot to reach the finish line, make the code detect if a certain amount of the pixels are black (As the finish line is a black “finish” flag), then the robot will stop, i.e. set the speed of the robot to 0.
+
+Completion testing:
+
+    13th June 10:58:
+
+Tested code for completion and seems to work as intended. However has the same issue as the core where the robot gets close to the finish line and goes off track.
+
+            
