@@ -11,6 +11,20 @@ int isWhite(int row, int col) {
 	return isWhite;
 }
 
+// checks to see if the flag is present on the camera
+int isFlag() {
+	int count = 0;
+	for (int row = 0; row < cameraView.height; row++) {
+		for (int col = 0; col < cameraView.width; col++) {
+			int pix = get_pixel(cameraView, row, col, 3);
+			
+			if (pix < 10) { count++; }
+		}
+	}
+	
+	return count > 1000;
+}
+
 int findFirstWhiteCol() {
 	int col = 0;
 	while(1) {
@@ -53,10 +67,15 @@ int main() {
 			vLeft = speed;
 			vRight = 2 * speed;
 		}
+		
+		if (isFlag()) {
+			vLeft = 0;
+			vRight = 0;
+		}
 
 		setMotors(vLeft,vRight);   
 		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
-		usleep(10000);
+		usleep(300);
 	} //while
 
 } // main
