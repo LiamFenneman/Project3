@@ -65,9 +65,9 @@ git, writing test cases and documenting performance against milestones)*
 ![image of environment variables](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/2.png)
 1. Clone respoitory somewhere on computer. *(e.g. Desktop, Documents or GitHub folders)* using GitHub Desktop *(or via git)*
 1. In the files that was added to your computer, delete the files, `robot.o`, `robot.exe`, `server3.o`, and `server3.exe`.
-1. Download the two makefiles: [AVC_robot](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/robot_makefile) & [AVC_server](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/server_makefile).
-    - Ensure they are **NOT** saved with "Text Document" but instead with "All Files" and do **NOT** have any extension.
-1. Put `robot_makefile` inside the `AVC_robot` folder and put `server_makefile` inside the `AVC_server` folder and rename both to *"makefile"*.
+1. [Download *makefiles.7z*](https://github.com/LiamFenneman/Project3/raw/installation-instructions-test/install_instructions/makefiles.7z) and open the file with 7Zip *(Right-click -> 7Zip -> Open archive)*.
+1. Drag the two folders inside the archive *("AVC_robot" & "AVC_server")* and drag them into your root "Project3" folder *(where you cloned the repo)*.
+![image of makefiles](https://raw.githubusercontent.com/LiamFenneman/Project3/master/install_instructions/images/6.png)
 1. Ensure the first line of each makefile contains the path to the SFML folder.
     - If following the instructions this should be: `DIR = C:\\SFML`.
 1. Open `server3.cpp` and `robot.cpp` in Geany.
