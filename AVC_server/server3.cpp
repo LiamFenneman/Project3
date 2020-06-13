@@ -123,14 +123,14 @@ int getCameraView()
 
 int drawAll(){
 	globalWindow.clear();
-	cameraWindow.clear();
+    cameraWindow.clear();
     drawMaze(); // draw without robot
-	globalWindow.display();
     getCameraView(); // get camera view
-	drawRobot();
-	globalWindow.display(); // draw with robot
-    cameraWindow.display();	
+    drawRobot();
+    globalWindow.display();
+    cameraWindow.display();    
     return 1;
+
 }
 
 // returns 0 if robot is free to move
