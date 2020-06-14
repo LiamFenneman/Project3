@@ -57,7 +57,7 @@ git, writing test cases and documenting performance against milestones)*
     - **Option 2:** *(only if **Option 1** doesn't work)* Go to the [SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit". 
 1. Select the two downloaded files. Right-Click one of the files and go to "7Zip" -> "Extract Here".
 ![image of extracting the files](/install_instructions/images/5.png)
-1. Select the two folders that were created *("mingw32" & "SFML-2.5.1")* and right-click one of the folders and select "Cut". Then go to the root of your C drive (type `C:\` into the address bar of File Explorer) and right-click the empty space at the bottom and click "Paste". The two folder should now appear within the root C drive *(like image below)*.
+1. Select the two folders that were created *("mingw32" & "SFML-2.5.1")* and right-click one of the folders and select "Cut". Then go to the root of your C drive (type `C:\` into the address bar of File Explorer) and right-click the empty space at the bottom and click "Paste". Rename "SFML-2.5.1" to "SFML". The folders should now appear within the root C drive.
 ![image of folder structure](/install_instructions/images/1.png)
 1. Search for "Environment Variables" in the Windows start menu and open the control panel "Edit the system environement variables".
 1. Click the button at the bottom called "Environment Variables" and double click on "Path".
