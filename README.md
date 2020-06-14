@@ -77,4 +77,4 @@ git, writing test cases and documenting performance against milestones)*
 ![image of independant commands](/install_instructions/images/3.png)
 1. To compile the program click the dropdown next to the "Build" button and click "Make All" (**OR** press `Shift+F9`).
 ![image of make all button](/install_instructions/images/4.png)
-1. Run the program by clicking the "Execute" button on `server3.cpp` and wait until, the command line comes up with "Listening" then press execute on `robot.cpp` (**OR** press `F5`).
+1. Run the program by clicking the "Execute" button on `server3.cpp` and wait until, the command line comes up with "Listening" then click on execute `robot.cpp` (**OR** press `F5`).
