@@ -63,6 +63,7 @@ git, writing test cases and documenting performance against milestones)*
 1. Click the button at the bottom called "Environment Variables" and double click on "Path".
 1. Add a new entry with `C:\\mingw32\bin`.
 ![image of environment variables](/install_instructions/images/2.png)
+1. Restart your computer for the changes to be made.
 1. Clone respoitory somewhere on computer. *(e.g. Desktop, Documents or GitHub folders)* using GitHub Desktop *(or via git)*
 1. In the files that was added to your computer, delete the files, `robot.o`, `robot.exe`, `server3.o`, and `server3.exe`.
 1. [Download *makefiles.7z*](/install_instructions/makefiles.7z) and open the file with 7Zip *(Right-click -> 7Zip -> Open archive)*.
