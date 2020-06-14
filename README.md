@@ -74,6 +74,6 @@ git, writing test cases and documenting performance against milestones)*
 1. Click the "Build" tab at the top OR the dropdown next to the "Build" button and select "Set Build Commands".
 1. Ensure the "Independant Commands" -> "Make" is set to `mingw32-make`.
 ![image of independant commands](/install_instructions/images/3.png)
-1. To compile the program click the dropdown next to the "Build" button and click "Make All".
+1. To compile the program click the dropdown next to the "Build" button and click "Make All" (**OR** press `Shift+F9`).
 ![image of make all button](/install_instructions/images/4.png)
-1. Run the program by clicking the "Execute" button on `server3.cpp` and then `robot.cpp`.
+1. Run the program by clicking the "Execute" button on `server3.cpp` and then `robot.cpp` (**OR** press `F5`).
