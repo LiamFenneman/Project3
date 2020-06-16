@@ -34,6 +34,5 @@ Challenge testing:
 
 For the challenge the robot seems to stop about halfway through the course, when trying to make a sharp corner.  
 
+I would think that the reason the robot would stop is due to the vLeft and vRight values get set to 0 at that point in the track. Will possibly need a further look into the code to provide suggestions to solve this.
 
-
-            
