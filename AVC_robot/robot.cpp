@@ -11,6 +11,25 @@ int findFirstWhiteCol() {
 		// if the pixel is white -> return the column no.
 		if (pix > 250) { return col; }
 	}
+	return 0;
+}
+
+int findClosestRedCol() {
+	int closest = 0;
+	
+	int row = cameraView.height-1; // middle row
+	int midCol = cameraView.width/2; // middle col
+	
+	for (int col = 0; col < cameraView.width; col++) {
+		int pix = get_pixel(cameraView, row, col, 0); // get the pixel
+		
+		if (pix > 250) {
+			if (std::abs(col) > std::abs(closest))
+			closest = col;
+		}
+	}
+	
+	return closest;
 }
 
 // checks to see if the flag is present on the camera
@@ -51,16 +70,28 @@ int main() {
 		takePicture();
 		
 		int midCol = cameraView.width/2;	// middle column
+		
+		int diff = 0;
+		int dir = 0;
+		
 		int firstCol = findFirstWhiteCol(); // first column that is white in the middle row
-		int diff = firstCol - midCol;		// the distance between the middle column and first white pixel
-		int dir = (diff > 0);				// the direction which the robot should move to correct itself
-											//  - move right when the line is to the right of the robot
+		if (std::abs(firstCol) > 0) {
+			diff = firstCol - midCol;	// the distance between the middle column and first white pixel
+			dir = (diff > 0);			// the direction which the robot should move to correct itself
+										//  - move right when the line is to the right of the robot
+		}
+		else {
+			diff = findClosestRedCol() - midCol; // the distance between the middle column and first white pixel
+			dir = (diff < 0);				     // the direction which the robot should move to correct itself
+		}
+		
 		// move the robot
 		if (isFlag()) { // stop on flag
 			vLeft = 0;
 			vRight = 0;
 		}
-		else if (dir) { // turn right
+		
+		if (dir) { // turn right
 			vLeft = ratio * speed;
 			vRight = speed;
 		}
@@ -68,6 +99,7 @@ int main() {
 			vLeft = speed;
 			vRight = ratio * speed;
 		}
+		
 
 		setMotors(vLeft,vRight);
 		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<"  dir="<<dir<<std::endl;
