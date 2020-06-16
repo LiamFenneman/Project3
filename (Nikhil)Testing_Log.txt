@@ -14,10 +14,26 @@ Other than that no further suggestions for the core, it seems to follow the line
  Suggestion:
 In order for the robot to reach the finish line, make the code detect if a certain amount of the pixels are black (As the finish line is a black “finish” flag), then the robot will stop, i.e. set the speed of the robot to 0.
 
+16th June - 6:50:
+
+The robot seems to stop at the finish line now, therefore now the core is fine.
+
 Completion testing:
 
     13th June 10:58:
 
 Tested code for completion and seems to work as intended. However has the same issue as the core where the robot gets close to the finish line and goes off track.
+
+    16th June - 6:53:
+
+The code currently is being worked on for the challenge however the current code does not seem to make the robot follow the line the track. This may be resolved if the current challenge component of the code is removed, or when the code starts working for challenge as well.
+
+Challenge testing:
+
+    16th June - 6:59:
+
+For the challenge the robot seems to stop about halfway through the course, when trying to make a sharp corner.  
+
+
 
             
