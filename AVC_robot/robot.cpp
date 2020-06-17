@@ -14,7 +14,7 @@ int findFirstWhiteCol() {
 	return 0;
 }
 
-int findClosestRedCol() {
+int findLeftClosestRedCol() {
 	int closest = 0;
 	
 	int row = cameraView.height-1; // middle row
@@ -23,8 +23,26 @@ int findClosestRedCol() {
 	for (int col = 0; col < cameraView.width; col++) {
 		int pix = get_pixel(cameraView, row, col, 0); // get the pixel
 		
-		if (pix > 250) {
-			if (std::abs(col) > std::abs(closest))
+		if (pix > 250 && col>closest) {
+			//if (std::abs(col) > std::abs(closest))
+			closest = col;
+		}
+	}
+	
+	return closest;
+}
+
+int findRightClosestRedCol() {
+	int closest = 0;
+	
+	int row = cameraView.height-1; // middle row
+	int midCol = cameraView.width/2; // middle col
+	
+	for (int col = 0; col < cameraView.width; col++) {
+		int pix = get_pixel(cameraView, row, col, 0); // get the pixel
+		
+		if (pix > 250 && col>closest) {
+			//if (std::abs(col) > std::abs(closest))
 			closest = col;
 		}
 	}
@@ -63,8 +81,9 @@ int main() {
 	// move the robot based on direction
 	//  -	speed:	 how fast the robot will move
 	//  -   ratio:	 the ratio between left and right wheel when moving
-	double speed = 10.0;
-	double ratio = 1.5;
+	double speed = 25.0;
+	double ratio = 1.4;
+	
 	
 	while(1) {
 		takePicture();
@@ -81,7 +100,7 @@ int main() {
 										//  - move right when the line is to the right of the robot
 		}
 		else {
-			diff = findClosestRedCol() - midCol; // the distance between the middle column and first white pixel
+			diff = findLeftClosestRedCol() - midCol; // the distance between the middle column and first white pixel
 			dir = (diff < 0);				     // the direction which the robot should move to correct itself
 		}
 		
