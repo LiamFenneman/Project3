@@ -1,5 +1,81 @@
 #include "robot.hpp"
 
+int isWhite(int row, int col) {
+	int pix = get_pixel(cameraView, row, col, 3);
+	int isWhite;
+	
+	if (pix > 250)	{ isWhite = 1; }
+	else 			{ isWhite = 0; }
+	
+	return isWhite;
+}
+
+int findFirstWhiteCol() {
+	int row = cameraView.height/2;
+	for (int col = 0; col < cameraView.width; col++) {
+		if (isWhite(row, col)) {
+			return col;
+		}
+	}
+}
+
+int isFlag() {
+	int count = 0;
+	for (int row = 0; row < cameraView.height; row++) {
+		for (int col = 0; col < cameraView.width; col++) {
+			int pix = get_pixel(cameraView, row, col, 3);
+			
+			if (pix < 10) { count++; }
+		}
+	}
+	
+	return count > 1000;
+}
+
+int main() {
+	if (initClientRobot() !=0){
+		std::cout<<" Error initializing robot"<<std::endl;
+	}
+	
+	double speed = 5.0;
+	double ratio = 1.75;
+	
+	double vLeft = speed;
+	double vRight = speed;
+	
+	while(1) {
+		takePicture();
+		int midCol = cameraView.width/2;
+		
+		int firstCol = findFirstWhiteCol();
+		int diff = firstCol - midCol;
+		
+		std::cout<<" diff="<<diff<<std::endl;
+		
+		// move to the right
+		if (diff > 0) {
+			vLeft = ratio * speed;
+			vRight = speed;
+		}
+		// move to the left
+		else if (diff < 0) {
+			vLeft = speed;
+			vRight = ratio * speed;
+		}
+		
+		if (isFlag()) {
+			vLeft = 0;
+			vRight = 0;
+		}
+
+		setMotors(vLeft,vRight);   
+		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
+		usleep(5000);
+	}
+}
+
+/*
+
 // find the first column that contains a white pixel
 // 	-	using the middle of the camera view
 int findFirstWhiteCol() {
@@ -69,28 +145,26 @@ int main() {
 	while(1) {
 		takePicture();
 		
-		int midCol = cameraView.width/2;	// middle column
-		
 		int diff = 0;
 		int dir = 0;
 		
 		int firstCol = findFirstWhiteCol(); // first column that is white in the middle row
+		int closeRed = findClosestRedCol();
+		
 		if (std::abs(firstCol) > 0) {
 			diff = firstCol - midCol;	// the distance between the middle column and first white pixel
 			dir = (diff > 0);			// the direction which the robot should move to correct itself
 										//  - move right when the line is to the right of the robot
 		}
+		else if (std::abs(closeRed) > 0) {
+			diff = closeRed - midCol;   // the distance between the middle column and first white pixel
+			dir = (diff < 0);			// the direction which the robot should move to correct itself
+		}
 		else {
-			diff = findClosestRedCol() - midCol; // the distance between the middle column and first white pixel
-			dir = (diff < 0);				     // the direction which the robot should move to correct itself
+			dir = 1; // turn right by default
 		}
 		
 		// move the robot
-		if (isFlag()) { // stop on flag
-			vLeft = 0;
-			vRight = 0;
-		}
-		
 		if (dir) { // turn right
 			vLeft = ratio * speed;
 			vRight = speed;
@@ -100,6 +174,11 @@ int main() {
 			vRight = ratio * speed;
 		}
 		
+		if (isFlag()) { // stop on flag
+			vLeft = 0;
+			vRight = 0;
+		}
+		
 
 		setMotors(vLeft,vRight);
 		std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<"  dir="<<dir<<std::endl;
@@ -107,3 +186,5 @@ int main() {
 	} //while
 
 } // main
+
+*/
