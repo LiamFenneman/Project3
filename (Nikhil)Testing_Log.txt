@@ -24,6 +24,12 @@ Completion testing:
 
 Tested code for completion and seems to work as intended. However has the same issue as the core where the robot gets close to the finish line and goes off track.
 
+    18th June - 1:16:
+
+With the current code being worked on for the challenge, it seems to go off track. And when it does, the robot seems to be programmed to turn right when it cannot find a white pixel.
+As it’s turning it reads the white pixels of the duck image and turns towards that direction, and stops when it touches the duck image.
+
+
     16th June - 6:53:
 
 The code currently is being worked on for the challenge however the current code does not seem to make the robot follow the line the track. This may be resolved if the current challenge component of the code is removed, or when the code starts working for challenge as well.
@@ -35,4 +41,10 @@ Challenge testing:
 For the challenge the robot seems to stop about halfway through the course, when trying to make a sharp corner.  
 
 I would think that the reason the robot would stop is due to the vLeft and vRight values get set to 0 at that point in the track. Will possibly need a further look into the code to provide suggestions to solve this.
+
+    18th June - 1:15:
+
+Still seems to have the same issues from previous tests.
+
+
 
