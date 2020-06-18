@@ -25,11 +25,9 @@ int findClosestRedCol() {
 		
 		if (pix > 250) {
 			if (std::abs(col) > std::abs(closest))
-			closest = col;
 		}
 	}
 	
-	return closest;
 }
 
 // checks to see if the flag is present on the camera
@@ -64,6 +62,7 @@ int main() {
 	//  -	speed:	 how fast the robot will move
 	//  -   ratio:	 the ratio between left and right wheel when moving
 	double speed = 10.0;
+	double speed = 15.0;
 	double ratio = 1.5;
 	
 	while(1) {
@@ -82,6 +81,7 @@ int main() {
 		}
 		else {
 			diff = findClosestRedCol() - midCol; // the distance between the middle column and first white pixel
+			diff = firstCol - midCol; // the distance between the middle column and first white pixel
 			dir = (diff < 0);				     // the direction which the robot should move to correct itself
 		}
 		
