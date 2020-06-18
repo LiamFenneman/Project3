@@ -24,7 +24,7 @@ int isFlag() {
 	
 	return count > 1000;
 }
-
+//finds the first white column from the camera view
 int findFirstWhiteCol() {
 	int col = 0;
 	while(1) {
@@ -42,9 +42,9 @@ int main() {
 	}
 	double vLeft = 3.0;
 	double vRight = 3.0;
-	std::string filename = "i0.ppm";
+	std::string filename = "i0.ppm"; //SavePPMFile(filename,cameraView);
 	//takePicture();
-	//SavePPMFile(filename,cameraView);
+	
 	
 	// WARNING: test core/completion/challenge when changing these values
 	double ratio = 1.50;
@@ -59,12 +59,12 @@ int main() {
 		
 		std::cout<<" diff="<<diff<<std::endl;
 		
-		// move to the right
+		// moves robot to the right
 		if (diff > 0) {
 			vLeft = ratio * speed;
 			vRight = speed;
 		}
-		// move to the left
+		// move robot to the left
 		else {
 			vLeft = speed;
 			vRight = ratio * speed;
