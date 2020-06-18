@@ -52,6 +52,8 @@ git, writing test cases and documenting performance against milestones)*
     - **OR** [Git](https://git-scm.com/) *(if familiar with **git** commands)*
 
 **Installation:**
+1. Download [Geany](https://www.geany.org/download/releases/) for Windows. Run the installer and keep all the default options.
+1. Download [7Zip](https://www.7-zip.org/) version 19.00 for Windows. Run the installer and keep all the default options.
 1. Install MinGW (32-bit) and SFML 2.5.1:
     - **Option 1:** via Direct Downloads: [MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/7.3.0/threads-posix/dwarf/i686-7.3.0-release-posix-dwarf-rt_v5-rev0.7z/download) & [SFML](https://www.sfml-dev.org/files/SFML-2.5.1-windows-gcc-7.3.0-mingw-32-bit.zip).
     - **Option 2:** *(only if **Option 1** doesn't work)* Go to the [SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and click "MinGW Builds 7.3.0 (32-bit)" and download button next to "GCC 7.3.0 MinGW (DW2) - 32-bit". 
