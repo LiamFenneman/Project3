@@ -63,7 +63,7 @@ int main() {
 	// move the robot based on direction
 	//  -	speed:	 how fast the robot will move
 	//  -   ratio:	 the ratio between left and right wheel when moving
-	double speed = 15.0;
+	double speed = 10.0;
 	double ratio = 1.5;
 	
 	while(1) {
@@ -81,7 +81,7 @@ int main() {
 										//  - move right when the line is to the right of the robot
 		}
 		else {
-			diff = firstCol - midCol; // the distance between the middle column and first white pixel
+			diff = findClosestRedCol() - midCol; // the distance between the middle column and first white pixel
 			dir = (diff < 0);				     // the direction which the robot should move to correct itself
 		}
 		
