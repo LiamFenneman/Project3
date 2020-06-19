@@ -34,6 +34,11 @@ As it’s turning it reads the white pixels of the duck image and turns towards 
 
 The code currently is being worked on for the challenge however the current code does not seem to make the robot follow the line the track. This may be resolved if the current challenge component of the code is removed, or when the code starts working for challenge as well.
 
+19th June - 4:44:
+
+Reverted code back to where the core and completion are now working, and now the robot seems to stop when it detects the flag in the camera.
+
+
 Challenge testing:
 
     16th June - 6:59:
@@ -45,6 +50,12 @@ I would think that the reason the robot would stop is due to the vLeft and vRigh
     18th June - 1:15:
 
 Still seems to have the same issues from previous tests.
+
+
+    19th June - 4:44:
+
+Reverted code back to where the core and completion are now working, therefore all work on challenge has been removed from the final submission copy of the code.
+
 
 
 
