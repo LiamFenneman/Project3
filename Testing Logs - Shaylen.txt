@@ -1,0 +1,19 @@
+Testing Log for Project 3
+
+June 09
+Code was checked and it worked fine, however it did not reach the finish line. Looked at what could be done to make it better, but because it it brief not much can be tested for it.
+
+June 12
+Updated code from GitHub was used to test the program. Worked completly fine when running for core and completion. Changed the code to make the robot travel faster as it was too slow. The code looks really good however there needs to be comments to explain what each step does in the code and when running the code for both core and completion it seems that the robot does not stop at the finish line as it keeps going. Also the robot does not exactly follow the white line, so adjustments need to be made. 
+
+June 14
+Core and Completion code tested both work fine there doesn't seem to be any need to make adjustments to it. Although it doesn't completly follow the white line, I have checked and it seems as long as it doesn't go too off the white line is should be fine as it is. 
+
+June 15 
+Challenge code tested. The robot does not complete the full maze, it only goes up to a certain point and crashes at the obstacle. Also at the start of the code the robot seems to be swinging too much, find a way to reduce that so that it doesn't swing to much.
+
+June 17
+Tested out the updated code, for all three maps, the recent code does not work for completion but works for core and partially for challenge. The robot does ends up going to a certain point in the code, however it crashes into an obstacle as it doesn't turn at that position. Adjusted the speed and the ratio to make it travel further than where it was originally crashing. Although it ended up crashing aswell further on.
+
+June 18
+Code on GitHub reverted back to the original code that was used before working on challenge. Final test of that to see if everything is still working. Eveyhting works completely fine for both core and completion. Added in a few more comments to the code. 
